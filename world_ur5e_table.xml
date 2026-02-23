@@ -5,6 +5,7 @@
   <option integrator="implicitfast" timestep="0.01" viscosity="0.01" />
 
 
+
   <!-- ================= DEFAULT SETTINGS ================= -->
   <default>
     <default class="ur5e">
@@ -86,7 +87,7 @@
     <!-- Table and tool meshes -->
     <mesh file="test.stl" scale="1 1 1" name="table" />
     <mesh name="base_mesh" file="mop_base.obj" scale="0.002 0.002 0.002" />
-    <mesh name="handle_mesh" file="mop_handle.obj" scale="0.0015 0.001 0.0015" />
+    <mesh name="handle_mesh" file="mop_handle.obj" scale="0.0015 0.0005 0.0015" />
   </asset>
 
   <!-- Visual settings: skybox + haze for infinite horizon look -->
@@ -110,7 +111,7 @@
     <!-- pos="-1.35 -0.7 -0.01" -->
 
     <!-- Table positioned as base platform -->
-    <body name="table" pos="0.66 -0.2 0" euler="0 0 1.57079632679">
+    <body name="table" pos="0.56 -0.2 0" euler="0 0 1.57079632679">
       <inertial mass="50" pos="0 0 0.05" diaginertia="10 10 5" />
       <geom name="table_collision" type="box" size="0.66 0.36 0.60" pos="0.0 0.0 0.01"
         material="table_material" group="3" contype="1" conaffinity="1"
@@ -195,7 +196,7 @@
                   <!-- Mop tool attachment -->
                   <body name="mop_mount" pos="0 0.08 0" quat="0 1 0 1">
 
-                    <body name="mop_tool" pos="0 -0.4 0">
+                    <body name="mop_tool" pos="0 -0.25 0">
                       <inertial mass="0.5" pos="0 0 0" diaginertia="0.01 0.01 0.01" />
                       <geom type="mesh" mesh="handle_mesh" density="500" friction="0.8 0.1 0.1" />
 
