@@ -932,7 +932,8 @@ def plot_trajectory_coverage_heatmap(
 if __name__ == "__main__":
     feedback_window = 30  # number of recent iterations to summarize for feedback
     step_size = 50
-    run_type = "semantics-RL-optimizer"
+    #run_type = "semantics-RL-optimizer"
+    run_type = "num-optimizer"
     traj_in_prompt = False
     resample_rate = 20
     template_number = '1'  # which prompt template to use
